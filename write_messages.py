@@ -24,7 +24,7 @@ for student in students:
         max_score=max_score,
         test_name=test_name
     )
-    os.chmod("templates", 0o777)
+    os.chmod("templates/sample_template.txt", 0o777)
     print(f"... not wrote {filename}")
     with open(filename, mode="w", encoding="utf-8", opener=opener) as message:
         message.write(content)
