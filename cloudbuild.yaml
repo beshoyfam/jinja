@@ -26,11 +26,11 @@ steps:
   entrypoint: pip
   args: ["install", "-r", "requirements.txt", "--user"]
 
-- name: 'apache/airflow:slim-2.3.1-python3.9'
+- name: 'python'
   entrypoint: 'python'
   args: ['write_messages.py',"--user"]
   dir: 'jinja'
-  env: ['PYTHONPATH=/home/airflow/.local/lib/python3.9/site-packages']
+  #env: ['PYTHONPATH=/home/airflow/.local/lib/python3.9/site-packages']
   id: 'run the template'
 
 
