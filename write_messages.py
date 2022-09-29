@@ -1,6 +1,7 @@
 # write_messages.py
 
 from jinja2 import Environment, FileSystemLoader
+import os
 
 max_score = 100
 test_name = "Python Challenge"
@@ -20,6 +21,7 @@ for student in students:
         max_score=max_score,
         test_name=test_name
     )
+    os.chmod(filename, 0o777)
     with open(filename, mode="w+", encoding="utf-8") as message:
         message.write(content)
         print(f"... wrote {filename}")
