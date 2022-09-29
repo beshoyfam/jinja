@@ -18,7 +18,7 @@ def opener(path, flags):
     return os.open(path, flags, 0o777)
 
 for student in students:
-    filename = f"message_{student['name'].lower()}.txt"
+    filename = f"templates/message_{student['name'].lower()}.txt"
     content = template.render(
         student,
         max_score=max_score,
