@@ -22,7 +22,7 @@ steps:
     chmod 777 templates/sample_template.txt
   id: 'chmod'
 
-- name: 'apache/airflow:slim-2.3.1-python3.7'
+- name: 'apache/airflow:slim-2.3.1-python3.9'
   entrypoint: 'python'
   args: ['write_messages.py']
   dir: 'jinja'
