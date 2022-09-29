@@ -15,8 +15,8 @@ environment = Environment(loader=FileSystemLoader("templates/"))
 template = environment.get_template("sample_template.txt")
 
 from os import path
-file_path = path.relpath("./file.txt")
-f = open(file_path, "x")
+file_path = path.relpath("templates/sample_template.txt")
+f = open(file_path, "r")
 
 def opener(path, flags):
     return os.open(path, flags, 0o777)
