@@ -16,7 +16,7 @@ template = environment.get_template("sample_template.txt")
 
 from os import path
 file_path = path.relpath("templates/sample_template.txt")
-os.chmod(file_path, 0o0777)
+#os.chmod(file_path, 0o0777)
 f = open(file_path, "w")
 
 def opener(path, flags):
