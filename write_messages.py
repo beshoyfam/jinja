@@ -14,8 +14,8 @@ students = [
 environment = Environment(loader=FileSystemLoader("templates/"))
 template = environment.get_template("sample_template.txt")
 
-def opener(path, flags):
-    return os.open(path, flags, 0o777)
+# def opener(path, flags):
+#     return os.open(path, flags, 0o777)
 
 for student in students:
     filename = f"message_{student['name'].lower()}.txt"
@@ -25,6 +25,7 @@ for student in students:
         test_name=test_name
     )
     print(f"... not wrote {filename}")
-    with open(filename, mode="w", encoding="utf-8", opener=opener) as message:
+    with open(filename, mode="w", encoding="utf-8") as message:
+        os.chmod(filename, 0o777)
         message.write(content)
         print(f"... wrote {filename}")
