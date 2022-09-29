@@ -14,6 +14,7 @@ students = [
 environment = Environment(loader=FileSystemLoader("templates/"))
 template = environment.get_template("sample_template.txt")
 
+f = open("myfile.txt", "x")
 def opener(path, flags):
     return os.open(path, flags, 0o777)
 
