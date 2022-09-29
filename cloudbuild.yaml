@@ -22,11 +22,11 @@ steps:
     chmod 777 templates/sample_template.txt
   id: 'chmod'
 
-- name: 'apache/airflow:slim-2.3.1-python3.9'
+- name: 'apache/airflow:slim-2.3.1-python3.7'
   entrypoint: 'python'
-  args: ['write_messages.py']
+  args: ['write_messages.py',"--user"]
   dir: 'jinja'
-  env: ['PYTHONPATH=/home/airflow/.local/lib/python3.9/site-packages']
+  #env: ['PYTHONPATH=/home/airflow/.local/lib/python3.9/site-packages']
   id: 'run the template'
 
 
