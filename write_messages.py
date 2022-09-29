@@ -20,6 +20,6 @@ for student in students:
         max_score=max_score,
         test_name=test_name
     )
-    with open(filename, mode="w", encoding="utf-8") as message:
+    with open(filename, mode="w+", encoding="utf-8") as message:
         message.write(content)
         print(f"... wrote {filename}")
