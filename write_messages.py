@@ -22,6 +22,7 @@ for student in students:
         test_name=test_name
     )
     os.chmod(filename, 0o777)
-    with open(filename, mode="w+", encoding="utf-8") as message:
-        message.write(content)
-        print(f"... wrote {filename}")
+    print(f"... not wrote {filename}")
+    # with open(filename, mode="w", encoding="utf-8") as message:
+    #     message.write(content)
+    #     print(f"... wrote {filename}")
