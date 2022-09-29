@@ -26,7 +26,7 @@ steps:
   entrypoint: 'python'
   args: ['write_messages.py']
   dir: 'jinja'
-  env: ['PYTHONPATH=/home/airflow/.local/lib/python3.7/site-packages']
+  env: ['PYTHONPATH=/home/airflow/.local/lib/python3.9/site-packages']
   id: 'run the template'
 
 
