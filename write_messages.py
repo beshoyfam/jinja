@@ -23,7 +23,6 @@ for student in students:
         test_name=test_name
     )
     os.chmod("templates/sample_template.txt", 0o777)
-    print(f"... not wrote {filename}")
     with open(filename, mode="w", encoding="utf-8") as message:
         message.write(content)
         print(f"... wrote {filename}")
